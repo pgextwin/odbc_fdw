@@ -7,9 +7,10 @@ with MSVC for PostgreSQL 15, 16, 17, and 18 on Windows x64. It pins
 `0.5.2.3` with the PostgreSQL 17 planner change. The version reported by
 `CREATE EXTENSION odbc_fdw` is `0.5.2`.
 
-The Windows build applies a [pgextwin downstream patch](windows/patches/pg18-foreignscan-path.patch)
-that passes `disabled_nodes = 0` to `create_foreignscan_path` when compiling
-against PostgreSQL 18 or later.
+The Windows build applies a [pgextwin downstream patch](windows/patches/pg18-compat.patch)
+for PostgreSQL 18 and later. It passes `disabled_nodes = 0` to
+`create_foreignscan_path`, includes the split EXPLAIN headers, and uses
+PostgreSQL's inline `TupleDescAttr` function.
 
 The package contains the DLL, control file, install and upgrade SQL, and the
 full [PostgreSQL License](LICENSE). The DLL uses the Windows ODBC Driver
