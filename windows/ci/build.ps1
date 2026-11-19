@@ -16,6 +16,10 @@ if (-not $vs -or -not $vs[0].Trim()) { throw 'MSVC x64 toolchain missing' }
 $devCmd = Join-Path $vs[0].Trim() 'Common7/Tools/VsDevCmd.bat'
 if (-not (Test-Path $devCmd)) { throw 'VsDevCmd unavailable' }
 
+$patch = Join-Path $PSScriptRoot '../patches/pg18-foreignscan-path.patch'
+& git -C $source apply --ignore-space-change $patch
+if ($LASTEXITCODE -ne 0) { throw 'Could not apply the PostgreSQL 18 compatibility patch' }
+
 $buildCmd = Join-Path $env:RUNNER_TEMP 'odbc-fdw-build.cmd'
 @"
 @echo off

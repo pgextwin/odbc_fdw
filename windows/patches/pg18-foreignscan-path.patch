@@ -1,0 +1,14 @@
+diff --git a/odbc_fdw.c b/odbc_fdw.c
+index b8e158f..cae8a46 100644
+--- a/odbc_fdw.c
++++ b/odbc_fdw.c
+@@ -1352,6 +1352,9 @@ static void odbcGetForeignPaths(PlannerInfo *root, RelOptInfo *baserel, Oid fore
+ 	                 NULL, /* PathTarget */
+ #endif
+ 	                 baserel->rows,
++#if PG_VERSION_NUM >= 180000
++	                 0, /* no disabled nodes */
++#endif
+ 	                 startup_cost,
+ 	                 total_cost,
+ 	                 NIL, /* no pathkeys */
