@@ -1,0 +1,2 @@
+LICENSE -text
+windows/patches/*.patch text eol=lf whitespace=-space-before-tab

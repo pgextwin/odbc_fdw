@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "name": "odbc_fdw",
+  "upstream": {
+    "repository": "CartoDB/odbc_fdw",
+    "ref": "dfb157dbf75c41381687608caf8fd35e2f973493",
+    "version": "0.5.2.3",
+    "commit": "dfb157dbf75c41381687608caf8fd35e2f973493"
+  },
+  "postgresql": {
+    "majors": [15, 16, 17, 18]
+  },
+  "windows": {
+    "architecture": "x64"
+  },
+  "license": {
+    "verifyAgainstUpstream": true,
+    "upstreamPath": "LICENSE"
+  }
+}

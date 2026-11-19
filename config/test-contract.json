@@ -1,0 +1,35 @@
+{
+  "contractVersion": 2,
+  "extension": "odbc_fdw",
+  "smokeTest": {
+    "script": "windows/ci/smoke-test.ps1"
+  },
+  "runtimeRequirements": {
+    "extensionCreation": "required",
+    "preload": "none",
+    "backgroundWorker": false,
+    "clientExecutable": {
+      "required": false,
+      "packagePaths": []
+    }
+  },
+  "testSetup": {
+    "preload": "none",
+    "backgroundWorker": false,
+    "settings": []
+  },
+  "coverage": {
+    "createExtension": "covered",
+    "backgroundWorker": "not-applicable",
+    "clientExecutable": "not-applicable",
+    "serverLogAssertions": "not-applicable",
+    "upgrade": "not-covered"
+  },
+  "functionalScenarios": [
+    {
+      "id": "query-localdb-through-odbc",
+      "description": "Creates SQL extension version 0.5.2 and reads typed rows from a local SQL Server LocalDB instance through the Windows x64 ODBC Driver Manager.",
+      "evidence": ["sql-result"]
+    }
+  ]
+}

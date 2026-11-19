@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "source": "github",
+  "repository": "CartoDB/odbc_fdw",
+  "strategy": "github-tags",
+  "prereleases": false,
+  "stableTagPattern": "^(?P<version>[0-9]+(?:\\.[0-9]+){2,3})$"
+}
