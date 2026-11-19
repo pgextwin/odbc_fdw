@@ -36,6 +36,7 @@ try {
         '-v', "odbc_endpoint=(localdb)\$instance")
     @'
 SET statement_timeout = '30s';
+SHOW server_version;
 CREATE EXTENSION odbc_fdw;
 CREATE SERVER ci_odbc FOREIGN DATA WRAPPER odbc_fdw
     OPTIONS (odbc_driver :'odbc_driver', odbc_server :'odbc_endpoint',
