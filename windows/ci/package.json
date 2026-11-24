@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "distribution": "dll-sql",
+  "files": [
+    {
+      "source": "upstream",
+      "path": "odbc_fdw.dll",
+      "destination": "lib/odbc_fdw.dll",
+      "targets": [
+        "install",
+        "zip"
+      ]
+    },
+    {
+      "source": "upstream",
+      "path": "odbc_fdw.control",
+      "destination": "share/extension/odbc_fdw.control",
+      "targets": [
+        "install",
+        "zip"
+      ]
+    },
+    {
+      "source": "license",
+      "path": "LICENSE",
+      "destination": "LICENSE",
+      "targets": [
+        "zip"
+      ]
+    },
+    {
+      "source": "upstream",
+      "path": "README.md",
+      "destination": "UPSTREAM-README.md",
+      "targets": [
+        "zip"
+      ]
+    },
+    {
+      "source": "upstream",
+      "path": "odbc_fdw--*.sql",
+      "destination": "share/extension/{fileName}",
+      "targets": [
+        "install",
+        "zip"
+      ],
+      "expectedCount": 7
+    }
+  ],
+  "packageInfo": [
+    "odbc_fdw Windows package",
+    "========================",
+    "",
+    "Upstream repository: {upstreamRepository}",
+    "Upstream ref:        {upstreamRef}",
+    "Upstream commit:     {upstreamCommit}",
+    "Upstream version:    {version}",
+    "SQL default_version: 0.5.2",
+    "PostgreSQL major:    {pgMajor}",
+    "PostgreSQL tested:   {pgTested}",
+    "Architecture:        Windows x64",
+    "Compiler:            MSVC x64",
+    "License:             PostgreSQL; see LICENSE",
+    "",
+    "Install a 64-bit ODBC driver for your target database on the PostgreSQL host."
+  ],
+  "sqlVersion": "0.5.2"
+}
