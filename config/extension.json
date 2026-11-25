@@ -8,7 +8,7 @@
     "commit": "dfb157dbf75c41381687608caf8fd35e2f973493"
   },
   "postgresql": {
-    "majors": [15, 16, 17, 18]
+    "majors": [15, 16, 17, 18, 19]
   },
   "windows": {
     "architecture": "x64"
