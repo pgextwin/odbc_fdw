@@ -27,7 +27,7 @@ call "$devCmd" -arch=x64 -host_arch=x64 >nul
 if errorlevel 1 exit /b %errorlevel%
 pushd "$source"
 if errorlevel 1 exit /b %errorlevel%
-cl /nologo /O2 /MD /DWIN32 /DWIN32_NO_STATUS /D_CRT_SECURE_NO_WARNINGS ^
+cl /nologo /std:c11 /O2 /MD /DWIN32 /DWIN32_NO_STATUS /D_CRT_SECURE_NO_WARNINGS ^
  /I"$PgRoot\include\server\port\win32_msvc" ^
  /I"$PgRoot\include\server\port\win32" ^
  /I"$PgRoot\include\server" /I"$PgRoot\include" ^
